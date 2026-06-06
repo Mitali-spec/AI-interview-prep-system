@@ -1,7 +1,16 @@
-question=[
-    "what is your name",
-    "introduce yourself",
-    "explain udp"
-]
-for q in question:
-    print(q)
+## in cmd type ollama run llama3
+from ollama import chat
+
+question=input("Ask a question")
+
+client=chat(
+    
+    model="llama3",
+    messages=[
+        {
+            "role":"user",
+            "message":question
+        }
+    ]
+)
+print(client["message"]["content"])
