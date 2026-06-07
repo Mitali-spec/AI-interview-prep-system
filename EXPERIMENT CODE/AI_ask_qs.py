@@ -1,7 +1,7 @@
 ## in cmd type ollama run llama3
 from ollama import chat
 
-question=input("Ask a question")
+question=input("Ask a question      ")
 
 client=chat(
     
@@ -9,7 +9,7 @@ client=chat(
     messages=[
         {
             "role":"user",
-            "message":question
+            "content":question
         }
     ]
 )
